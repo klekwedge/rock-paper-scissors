@@ -5,7 +5,7 @@ import store from "./store/store";
 import App from "./components/App/App";
 import { ChakraProvider } from "@chakra-ui/react";
 
-ReactDOM.createRoot(document.getElementById("root")).render(
+ReactDOM.createRoot(document.getElementById("root") as Element).render(
   <Provider store={store}>
     <ChakraProvider>
       <App />

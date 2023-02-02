@@ -10,11 +10,12 @@ import ComputerHand from "../ComputerHand/ComputerHand";
 import Health from "../Health/Health";
 import Option from "../Option/Option";
 import PlayerHand from "../PlayerHand/PlayerHand";
+import { RootState } from "../../store/store";
 
 function App() {
   const dispatch = useDispatch();
   const { playerHealth, computerHealth, status } = useSelector(
-    (state) => state.hands
+    (state: RootState) => state.hands
   );
 
   function generateRandomOption() {
