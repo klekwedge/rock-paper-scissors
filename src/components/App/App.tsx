@@ -50,7 +50,6 @@ function App() {
         >
           <Option
             backgroundColor="#5671F5"
-            image="1"
             imageSrc="svg/rock_icon.svg"
             setCurrentHand={() => {
               dispatch(changePlayerHand("rock"));
@@ -60,7 +59,6 @@ function App() {
           />
           <Option
             backgroundColor="#ECA922"
-            image="2"
             imageSrc="svg/paper_icon.svg"
             setCurrentHand={() => {
               dispatch(changePlayerHand("paper"));
@@ -70,7 +68,6 @@ function App() {
           />
           <Option
             backgroundColor="#DD405D"
-            image="3"
             imageSrc="svg/scissors_icon.svg"
             setCurrentHand={() => {
               dispatch(changePlayerHand("scissors"));

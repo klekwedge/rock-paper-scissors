@@ -1,6 +1,12 @@
 import { Button, Image } from "@chakra-ui/react";
 
-function Option({ backgroundColor, imageSrc, setCurrentHand, option }) {
+interface OptionProps {
+  backgroundColor: string;
+  imageSrc: string;
+  setCurrentHand: () => void;
+}
+
+function Option({ backgroundColor, imageSrc, setCurrentHand }: OptionProps) {
   return (
     <Button
       borderRadius="50%"
@@ -11,9 +17,9 @@ function Option({ backgroundColor, imageSrc, setCurrentHand, option }) {
       h="130px"
       color="black"
       _hover={{
-        transform: 'scale(1.10)'
+        transform: "scale(1.10)",
       }}
-      onClick={() => setCurrentHand(option)}
+      onClick={() => setCurrentHand()}
     >
       <Image src={imageSrc} w="100%" h="100%" />
     </Button>
