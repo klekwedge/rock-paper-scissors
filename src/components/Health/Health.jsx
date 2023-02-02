@@ -1,6 +1,15 @@
-import { Image, Flex, Progress, Text } from "@chakra-ui/react";
+import { Image, Flex, Progress } from "@chakra-ui/react";
 
-function Health({ top, left, bottom, right, deg, progressColor, imageSrc }) {
+function Health({
+  top,
+  left,
+  bottom,
+  right,
+  deg,
+  progressColor,
+  imageSrc,
+  health,
+}) {
   return (
     <Flex
       borderRadius="10px"
@@ -18,7 +27,7 @@ function Health({ top, left, bottom, right, deg, progressColor, imageSrc }) {
         w="150px"
         colorScheme={progressColor}
         size="md"
-        value={100}
+        value={health}
         borderRadius="5px"
       />
       <Flex
