@@ -12,17 +12,29 @@ function App() {
       backgroundColor="#1C2F4F"
     >
       <Flex
-        gap="20px"
+        gap="30px"
         justifyContent="center"
         alignItems="center"
         flexWrap="wrap"
       >
-        <Option backgroundColor="#5671F5" image="1" />
-        <Option backgroundColor="#ECA922" image="2" />
-        <Option backgroundColor="#DD405D" image="3" />
+        <Option
+          backgroundColor="#5671F5"
+          image="1"
+          imageSrc="/public/svg/rock_icon.svg"
+        />
+        <Option
+          backgroundColor="#ECA922"
+          image="2"
+          imageSrc="/public/svg/paper_icon.svg"
+        />
+        <Option
+          backgroundColor="#DD405D"
+          image="3"
+          imageSrc="/public/svg/scissors_icon.svg"
+        />
       </Flex>
-      <Health top="100px" right='1vw' deg='-90'/>
-      <Health bottom="100px" left='1vw' deg='90'/>
+      <Health top="150px" right="1vw" deg="-90" progressColor="red" />
+      <Health bottom="150px" left="1vw" deg="90" progressColor="green" />
     </Flex>
   );
 }
