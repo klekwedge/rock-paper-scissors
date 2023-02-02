@@ -50,7 +50,7 @@ function App() {
           <Option
             backgroundColor="#5671F5"
             image="1"
-            imageSrc="/public/svg/rock_icon.svg"
+            imageSrc="./../../../public/svg/rock_icon.svg"
             setCurrentHand={() => {
               dispatch(changePlayerHand("rock"));
               dispatch(changeComputerHand(generateRandomOption()));

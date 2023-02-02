@@ -3,8 +3,8 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   playerHand: "idle",
   computerHand: "idle",
-  playerHealth: 10,
-  computerHealth: 10,
+  playerHealth: 100,
+  computerHealth: 100,
   status: "game",
 };
 
