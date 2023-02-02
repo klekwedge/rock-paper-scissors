@@ -6,14 +6,15 @@ function Option({ backgroundColor, image }) {
       borderRadius="50%"
       padding="20px"
       backgroundColor={backgroundColor}
-      border="1px solid black"
+      border={`5px solid ${backgroundColor}`}
       flex="0 0 40%"
+      transition='all 0.5s ease'
       w="80px"
       h="110px"
       color="black"
       _hover={{
         backgroundColor: "white",
-        border: `1px solid ${backgroundColor}`,
+        border: `5px solid ${backgroundColor}`,
       }}
     >
       {image}
