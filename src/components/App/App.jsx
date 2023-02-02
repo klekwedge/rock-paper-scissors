@@ -1,8 +1,9 @@
-import { Flex, Heading } from "@chakra-ui/react";
+import { Button, Flex, Heading } from "@chakra-ui/react";
 import {
   changeComputerHand,
   changeHealth,
   changePlayerHand,
+  restartGame,
 } from "../../slices/handsSlice/handsSlice";
 import { useDispatch, useSelector } from "react-redux";
 import ComputerHand from "../ComputerHand/ComputerHand";
@@ -78,12 +79,21 @@ function App() {
           />{" "}
         </Flex>
       ) : (
-        <Heading
-          color={status === "win" ? "#32CD32" : "#DC143C"}
-          textTransform="uppercase"
-        >
-          You {status}
-        </Heading>
+        <Flex flexDirection="column" gap="40px">
+          <Heading
+            color={status === "win" ? "#32CD32" : "#DC143C"}
+            textTransform="uppercase"
+          >
+            You {status}
+          </Heading>
+          <Button
+            onClick={() => dispatch(restartGame())}
+            colorScheme="gray"
+            fontSize="25px"
+          >
+            Restart
+          </Button>
+        </Flex>
       )}
       <Health
         top="150px"

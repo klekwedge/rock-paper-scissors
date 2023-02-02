@@ -3,8 +3,8 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   playerHand: "idle",
   computerHand: "idle",
-  playerHealth: 100,
-  computerHealth: 100,
+  playerHealth: 10,
+  computerHealth: 10,
   status: "game",
 };
 
@@ -45,9 +45,19 @@ const timerSlice = createSlice({
         state.status = "lose";
       }
     },
+    restartGame: (state) => {
+      state.status = "game";
+      state.playerHealth = 100;
+      state.computerHealth = 100;
+    },
   },
 });
 
 const { actions, reducer } = timerSlice;
-export const { changePlayerHand, changeComputerHand, changeHealth } = actions;
+export const {
+  changePlayerHand,
+  changeComputerHand,
+  changeHealth,
+  restartGame,
+} = actions;
 export default reducer;
