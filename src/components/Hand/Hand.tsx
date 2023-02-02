@@ -1,7 +1,16 @@
 import { Image } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 
-function Hand({ top, left, right, bottom, deg, currentHand }) {
+interface HandProps {
+  top?: string;
+  left?: string;
+  right?: string;
+  bottom?: string;
+  deg?: number;
+  currentHand: string;
+}
+
+function Hand({ top, left, right, bottom, deg, currentHand }: HandProps) {
   const [currentImage, setCurrentImage] = useState("");
 
   useEffect(() => {
