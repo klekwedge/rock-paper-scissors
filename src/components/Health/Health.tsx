@@ -1,5 +1,16 @@
 import { Image, Flex, Progress } from "@chakra-ui/react";
 
+interface HealthProps {
+  top?: string;
+  left?: string;
+  bottom?: string;
+  right?: string;
+  deg: string;
+  progressColor: string;
+  imageSrc: string;
+  health: number;
+}
+
 function Health({
   top,
   left,
@@ -9,7 +20,7 @@ function Health({
   progressColor,
   imageSrc,
   health,
-}) {
+}: HealthProps) {
   return (
     <Flex
       borderRadius="10px"
