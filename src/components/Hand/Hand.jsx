@@ -7,19 +7,19 @@ function Hand({ top, left, right, bottom, deg, currentHand }) {
   useEffect(() => {
     switch (currentHand) {
       case "idle":
-        setCurrentImage("public/svg/male_idle.svg");
+        setCurrentImage("svg/male_idle.svg");
         break;
       case "rock":
-        setCurrentImage("public/svg/male_rock.svg");
+        setCurrentImage("svg/male_rock.svg");
         break;
       case "paper":
-        setCurrentImage("public/svg/male_paper.svg");
+        setCurrentImage("svg/male_paper.svg");
         break;
       case "scissors":
-        setCurrentImage("public/svg/male_scissors.svg");
+        setCurrentImage("svg/male_scissors.svg");
         break;
       default:
-        setCurrentImage("public/svg/male_idle.svg");
+        setCurrentImage("svg/male_idle.svg");
     }
   }, [currentHand]);
 
