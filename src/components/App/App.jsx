@@ -33,8 +33,8 @@ function App() {
           imageSrc="/public/svg/scissors_icon.svg"
         />
       </Flex>
-      <Health top="150px" right="1vw" deg="-90" progressColor="red" />
-      <Health bottom="150px" left="1vw" deg="90" progressColor="green" />
+      <Health top="150px" right="1vw" deg="-90" progressColor="red" imageSrc='/public/img/villain.png'/>
+      <Health bottom="150px" left="1vw" deg="90" progressColor="green" imageSrc='/public/img/superhero.png'/>
     </Flex>
   );
 }

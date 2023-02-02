@@ -1,17 +1,17 @@
-import { Image, Flex, Progress } from "@chakra-ui/react";
+import { Image, Flex, Progress, Text } from "@chakra-ui/react";
 
-function Health({ top, left, bottom, right, deg, progressColor }) {
+function Health({ top, left, bottom, right, deg, progressColor, imageSrc }) {
   return (
     <Flex
       borderRadius="10px"
       alignItems="center"
+      gap="20px"
       justifyContent="center"
       position="absolute"
       top={top}
       left={left}
       bottom={bottom}
       right={right}
-      color="red"
       transform={`rotate(${deg}deg)`}
     >
       <Progress
@@ -21,7 +21,14 @@ function Health({ top, left, bottom, right, deg, progressColor }) {
         value={100}
         borderRadius="5px"
       />
-      <Image transform={`rotate(${-deg}deg)`} />
+      <Flex
+        gap="5px"
+        transform={`rotate(${-deg}deg)`}
+        flexDirection="column"
+        alignItems="center"
+      >
+        <Image src={imageSrc} w="50px" />
+      </Flex>
     </Flex>
   );
 }
