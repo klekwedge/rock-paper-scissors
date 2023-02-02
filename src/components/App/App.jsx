@@ -1,11 +1,12 @@
 import { Flex } from "@chakra-ui/react";
 import { useState } from "react";
-import Hand from "../Hand/Hand";
+import ComputerHand from "../ComputerHand/ComputerHand";
 import Health from "../Health/Health";
 import Option from "../Option/Option";
+import PlayerHand from "../PlayerHand/PlayerHand";
 
 function App() {
-  const [currentHand, setCurrentHand] = useState("idle");
+  // const [currentHand, setCurrentHand] = useState("idle");
 
   return (
     <Flex
@@ -27,22 +28,22 @@ function App() {
           backgroundColor="#5671F5"
           image="1"
           imageSrc="/public/svg/rock_icon.svg"
-          option='rock'
-          setCurrentHand={setCurrentHand}
+          option="rock"
+          // setCurrentHand={setCurrentHand}
         />
         <Option
           backgroundColor="#ECA922"
           image="2"
           imageSrc="/public/svg/paper_icon.svg"
-          option='paper'
-          setCurrentHand={setCurrentHand}
+          option="paper"
+          // setCurrentHand={setCurrentHand}
         />
         <Option
           backgroundColor="#DD405D"
           image="3"
           imageSrc="/public/svg/scissors_icon.svg"
-          option='scissors'
-          setCurrentHand={setCurrentHand}
+          option="scissors"
+          // setCurrentHand={setCurrentHand}
         />
       </Flex>
       <Health
@@ -59,13 +60,8 @@ function App() {
         progressColor="green"
         imageSrc="/public/img/superhero.png"
       />
-      {/* <Hand
-        top="-30px"
-        left="1vw"
-        deg={180}
-        imageSrc="/public/svg/male_idle.svg"
-      /> */}
-      <Hand right="1vw" bottom="-30px" deg={0} currentHand={currentHand} />
+      <ComputerHand />
+      <PlayerHand />
     </Flex>
   );
 }
