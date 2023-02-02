@@ -50,7 +50,7 @@ function App() {
           <Option
             backgroundColor="#5671F5"
             image="1"
-            imageSrc="./../../../public/svg/rock_icon.svg"
+            imageSrc="public/svg/rock_icon.svg"
             setCurrentHand={() => {
               dispatch(changePlayerHand("rock"));
               dispatch(changeComputerHand(generateRandomOption()));
@@ -60,7 +60,7 @@ function App() {
           <Option
             backgroundColor="#ECA922"
             image="2"
-            imageSrc="/public/svg/paper_icon.svg"
+            imageSrc="public/svg/paper_icon.svg"
             setCurrentHand={() => {
               dispatch(changePlayerHand("paper"));
               dispatch(changeComputerHand(generateRandomOption()));
@@ -70,7 +70,7 @@ function App() {
           <Option
             backgroundColor="#DD405D"
             image="3"
-            imageSrc="/public/svg/scissors_icon.svg"
+            imageSrc="public/svg/scissors_icon.svg"
             setCurrentHand={() => {
               dispatch(changePlayerHand("scissors"));
               dispatch(changeComputerHand(generateRandomOption()));
@@ -100,7 +100,7 @@ function App() {
         right="1vw"
         deg="-90"
         progressColor="red"
-        imageSrc="/public/img/villain.png"
+        imageSrc="public/img/villain.png"
         health={computerHealth}
       />
       <Health
@@ -108,7 +108,7 @@ function App() {
         left="1vw"
         deg="90"
         progressColor="green"
-        imageSrc="/public/img/superhero.png"
+        imageSrc="public/img/superhero.png"
         health={playerHealth}
       />
       <ComputerHand />
