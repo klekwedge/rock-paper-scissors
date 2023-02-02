@@ -1,12 +1,29 @@
 import { Flex } from "@chakra-ui/react";
-import { useState } from "react";
+import {
+  changeComputerHand,
+  changePlayerHand,
+} from "../../slices/handsSlice/handsSlice";
+import { useDispatch } from "react-redux";
 import ComputerHand from "../ComputerHand/ComputerHand";
 import Health from "../Health/Health";
 import Option from "../Option/Option";
 import PlayerHand from "../PlayerHand/PlayerHand";
 
 function App() {
-  // const [currentHand, setCurrentHand] = useState("idle");
+  const dispatch = useDispatch();
+
+  function generateRandomOption() {
+    const num = Math.floor(Math.random() * 3);
+    switch (num) {
+      case 0:
+        return "rock";
+      case 1:
+        return "paper";
+      case 2:
+        return "scissors";
+    }
+    return "rock";
+  }
 
   return (
     <Flex
@@ -28,22 +45,28 @@ function App() {
           backgroundColor="#5671F5"
           image="1"
           imageSrc="/public/svg/rock_icon.svg"
-          option="rock"
-          // setCurrentHand={setCurrentHand}
+          setCurrentHand={() => {
+            dispatch(changePlayerHand("rock"));
+            dispatch(changeComputerHand(generateRandomOption()));
+          }}
         />
         <Option
           backgroundColor="#ECA922"
           image="2"
           imageSrc="/public/svg/paper_icon.svg"
-          option="paper"
-          // setCurrentHand={setCurrentHand}
+          setCurrentHand={() => {
+            dispatch(changePlayerHand("paper"));
+            dispatch(changeComputerHand(generateRandomOption()));
+          }}
         />
         <Option
           backgroundColor="#DD405D"
           image="3"
           imageSrc="/public/svg/scissors_icon.svg"
-          option="scissors"
-          // setCurrentHand={setCurrentHand}
+          setCurrentHand={() => {
+            dispatch(changePlayerHand("scissors"));
+            dispatch(changeComputerHand(generateRandomOption()));
+          }}
         />
       </Flex>
       <Health

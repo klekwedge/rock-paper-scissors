@@ -1,14 +1,10 @@
+import { useSelector } from "react-redux";
 import Hand from "../Hand/Hand";
 
 function ComputerHand() {
-  return (
-    <Hand
-      top="-30px"
-      left="1vw"
-      deg={180}
-      imageSrc="/public/svg/male_idle.svg"
-    />
-  );
+  const { computerHand } = useSelector((state) => state.hands);
+
+  return <Hand top="-30px" left="1vw" deg={180} currentHand={computerHand} />;
 }
 
 export default ComputerHand;
