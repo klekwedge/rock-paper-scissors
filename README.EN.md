@@ -1,6 +1,6 @@
 # Rock paper scissors
 
-**Вы также можете прочитать этот README на [русском](https://github.com/klekwedge/cv/blob/main/README.md)**
+**Вы также можете прочитать этот README на [русском](https://github.com/klekwedge/rock-paper-scissors/blob/main/README.md)**
 
 ## Table of contents
 
